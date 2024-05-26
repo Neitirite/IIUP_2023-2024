@@ -6,7 +6,7 @@
     Public answer As Integer = 0 ' Переменная, хранящая номер ответа на вопрос, 0 - ответ не выбран, 1-4 - выбранный ответ. ЗНАЧЕНИЕ ВРУЧНУЮ НЕ ИЗМЕНЯТЬ.
     Public i As Integer = 0 ' Счётчик для вопросов. ВРУЧНУЮ НЕ ИЗМЕНЯТЬ.
     Public true_answers_count As Integer = 0 ' Счётчик правильных ответов. ВРУЧНУЮ НЕ ИЗМЕНЯТЬ.
-    Public Function config() ' Функция конфигурации, здесь вы можете ввести тестовый материал. В будущем конфигурация переедет в отдельный JSON файл.
+    Public Function config() ' Функция конфигурации, здесь вы можете ввести тестовый материал.
         questions = { ' Массив вопросов.
         "Электронными таблицами являются следующие приложения:", ' Первый вопрос. Новая строка - новый вопрос.
         "Прикладное программное обеспечение представляет собой:",
@@ -65,7 +65,7 @@
         Label2.Text = "Вопрос 1 из " + questions_count.ToString
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click ' кнопка "Проверить".
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click ' кнопка "Далее".
         If i < (questions_count * 4) Then
             If answer = answers_a(i / 4) Then
                 true_answers_count += 1
@@ -75,10 +75,22 @@
         answer = 0
         i += 4
         next_question()
+        If Button1.Text = "Выход" Then 'Проверяем, отвечает ли эта кнопка за выход, если да - закрываем приложение
+            Close()
+        End If
         If i >= (questions_count * 4) Then
             Label1.Text = "Ваш результат:"
             Label3.Text = true_answers_count.ToString + " из " + questions_count.ToString + " (" + ((true_answers_count / questions_count) * 100).ToString + "%)" ' Выводим результат тестирования(даже с процентами).
+            RadioButton1.Visible = False
+            RadioButton2.Visible = False
+            RadioButton3.Visible = False
+            RadioButton4.Visible = False
+            Button1.Text = "Выход" 'Меняем кнопку "Далее" на кнопку "Выход"
+            Button1.BackColor = Color.Red 'Меняем цвет кнопки на красный
+            Label2.Visible = False
+            ProgressBar1.Visible = False
         End If
+
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged ' Первый ответ

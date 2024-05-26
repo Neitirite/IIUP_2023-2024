@@ -78,7 +78,7 @@ Partial Class Form1
         RadioButton1.Anchor = AnchorStyles.Left
         RadioButton1.AutoSize = True
         RadioButton1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(204))
-        RadioButton1.Location = New Point(24, 142)
+        RadioButton1.Location = New Point(24, 322)
         RadioButton1.Name = "RadioButton1"
         RadioButton1.Size = New Size(83, 25)
         RadioButton1.TabIndex = 4
@@ -91,7 +91,7 @@ Partial Class Form1
         RadioButton2.Anchor = AnchorStyles.Left
         RadioButton2.AutoSize = True
         RadioButton2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(204))
-        RadioButton2.Location = New Point(24, 191)
+        RadioButton2.Location = New Point(24, 371)
         RadioButton2.Name = "RadioButton2"
         RadioButton2.Size = New Size(83, 25)
         RadioButton2.TabIndex = 4
@@ -104,7 +104,7 @@ Partial Class Form1
         RadioButton3.Anchor = AnchorStyles.Left
         RadioButton3.AutoSize = True
         RadioButton3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(204))
-        RadioButton3.Location = New Point(24, 239)
+        RadioButton3.Location = New Point(24, 419)
         RadioButton3.Name = "RadioButton3"
         RadioButton3.Size = New Size(83, 25)
         RadioButton3.TabIndex = 4
@@ -117,7 +117,7 @@ Partial Class Form1
         RadioButton4.Anchor = AnchorStyles.Left
         RadioButton4.AutoSize = True
         RadioButton4.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(204))
-        RadioButton4.Location = New Point(24, 288)
+        RadioButton4.Location = New Point(24, 468)
         RadioButton4.Name = "RadioButton4"
         RadioButton4.Size = New Size(83, 25)
         RadioButton4.TabIndex = 4
@@ -131,18 +131,18 @@ Partial Class Form1
         Button1.BackColor = Color.Teal
         Button1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(204))
         Button1.ForeColor = SystemColors.ButtonFace
-        Button1.Location = New Point(24, 334)
+        Button1.Location = New Point(24, 695)
         Button1.Name = "Button1"
         Button1.Size = New Size(139, 44)
         Button1.TabIndex = 5
-        Button1.Text = "Проверить"
+        Button1.Text = "Далее"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1755, 397)
+        ClientSize = New Size(1755, 758)
         Controls.Add(Button1)
         Controls.Add(RadioButton4)
         Controls.Add(RadioButton3)
