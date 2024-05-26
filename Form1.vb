@@ -50,7 +50,7 @@
         Return 0 ' Возвращаем код успешного завершения выполнения функции. Это надо, чтобы IDE не ругалась.
     End Function
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load ' Основная функция загрузки формы, срабатывает при запуске приложения. Это всё, что надо знать.
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load ' Основная функция загрузки формы, срабатывает при запуске приложения.
         config()
         RadioButton1.Checked = False
         RadioButton2.Checked = False
@@ -75,7 +75,7 @@
         answer = 0
         i += 4
         next_question()
-        If Button1.Text = "Выход" Then 'Проверяем, отвечает ли эта кнопка за выход, если да - закрываем приложение
+        If Button1.Text = "Выход" Then 'Проверяем, отвечает ли эта кнопка за выход, если да - закрываем приложение.
             Close()
         End If
         If i >= (questions_count * 4) Then
@@ -85,24 +85,24 @@
             RadioButton2.Visible = False
             RadioButton3.Visible = False
             RadioButton4.Visible = False
-            Button1.Text = "Выход" 'Меняем кнопку "Далее" на кнопку "Выход"
-            Button1.BackColor = Color.Red 'Меняем цвет кнопки на красный
+            Button1.Text = "Выход" 'Меняем кнопку "Далее" на кнопку "Выход".
+            Button1.BackColor = Color.Red 'Меняем цвет кнопки на красный.
             Label2.Visible = False
             ProgressBar1.Visible = False
         End If
 
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged ' Первый ответ
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged ' Первый ответ.
         answer = 1
     End Sub
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged ' Второй ответ
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged ' Второй ответ.
         answer = 2
     End Sub
-    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged ' Третий ответ
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged ' Третий ответ.
         answer = 3
     End Sub
-    Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged ' Четвёртый ответ
+    Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged ' Четвёртый ответ.
         answer = 4
     End Sub
 End Class
